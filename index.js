@@ -33,11 +33,11 @@ type Usuario {
     produto(id: Int, nome: String): Produto
   }
 `;
-//Os dados que entrar nos SCHEMAS, devem obrigatoriamente compor a Query acima, ou não apareceram nas pesquisas.
+//Os dados que entrar nos SCHEMAS, devem obrigatoriamente compor a Query acima, ou não aparecerão nas pesquisas.
 
 //as exclamações em tecnologias determinam que os campos não podem ser nulos e devem ser strings.
 
-//dentro do resolvers nos precisamos resolver cada query, caso não implementar o resolver, as consultas serão nullas..
+//dentro dos resolvers, nós precisamos resolver cada query, caso não implementar o resolver, as consultas serão nulas..
 // dentro do resolver, devemos ter o mesmo contexto da definição de tipos.
 const resolvers= {
   Query: {
@@ -47,8 +47,8 @@ const resolvers= {
     //implementação de filtro para facilitar busca, assim podemos filtrar procurando por nome ou id. Observe que id tem preferência na busca.
     usuario(_, args){ //args é um objeto que recebera valores de acordo com o que vai ser passado a ele. Observe que o usuario ja foi declarado em Query como it:Int
       const {id, nome} = args;
-      if(id) return usuarios.find((usuario) => usuario.id === id);//procurar dentro de usuarios e buscar usuario.id  que seja igual a args.id
-      return usuarios.find((usuario) => usuario.nome === nome);
+      if(id) return usuarios.find((usuario) => usuario.id === id);//procurar dentro de usuarios e buscar usuario por id que seja igual ao parâmetro passado na busca.
+      return usuarios.find((usuario) => usuario.nome === nome); // caso não for passado id, procurar por nome.
     },
     //filtro para produtos similar ao filtro acima.
     produto(_, args) {
@@ -62,7 +62,7 @@ const resolvers= {
     }
   }
 };
- // aqui foram criados arrays de produtos e usuarios para facilitar as buscas. Porém ainda é necessaio referencia-los nos resolvers, veja que o mesmo retorna usuarios e produtos.
+ // aqui foram criados arrays de produtos e usuarios para facilitar as buscas. Porém ainda é necessario referência-los nos resolvers. Veja que o mesmo retorna usuarios e produtos.
 const produtos = [
      {
      id:1,
