@@ -1,0 +1,20 @@
+{
+  "name": "graphql---iniciando",
+  "version": "1.0.0",
+  "description": "Aprendendo conceitos da linguagem de pesquis GraphQL com Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["GraphQL", "Node.js"],
+  "author": "Rafael Coronetti",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.0",
+    "graphql": "^16.5.0"
+  }
+}
