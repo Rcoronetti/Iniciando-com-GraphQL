@@ -7,14 +7,21 @@
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["GraphQL", "Node.js"],
+  "keywords": [
+    "GraphQL",
+    "Node.js"
+  ],
   "author": "Rafael Coronetti",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "@graphql-tools/load-files": "^6.6.1",
+    "@graphql-tools/merge": "^8.3.3",
+    "@graphql-tools/schema": "^9.0.1",
     "apollo-server": "^3.10.0",
-    "graphql": "^16.5.0"
+    "graphql": "^16.5.0",
+    "graphql-tools": "^8.3.3"
   }
 }
