@@ -4,7 +4,7 @@
   "description": "Aprendendo conceitos da linguagem de pesquis GraphQL com Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon -e js,gql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
